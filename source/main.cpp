@@ -115,8 +115,7 @@ void generatePipes()
 
 void saveScore()
 {
-    // need to save the save file in this path, cuz the folder app is read-only, and for that I can't overwrite any file.
-    std::ofstream highScores("ux0:data/high-score.txt");
+    std::ofstream highScores("high-score.txt");
 
     std::string scoreString = std::to_string(score);
     highScores << scoreString;
@@ -128,13 +127,13 @@ int loadHighScore()
 {
     std::string highScoreText;
 
-    std::ifstream highScores("ux0:data/high-score.txt");
+    std::ifstream highScores("high-score.txt");
 
     if (!highScores.is_open())
     {
         saveScore();
 
-        std::ifstream auxHighScores("ux0:data/high-score.txt");
+        std::ifstream auxHighScores("high-score.txt");
 
         getline(auxHighScores, highScoreText);
 
@@ -159,7 +158,8 @@ void resetGame(Player &player)
 {
     if (score > highScore)
     {
-        saveScore();
+        highScore = score;
+        // saveScore();
     }
 
     // highScore = loadHighScore();

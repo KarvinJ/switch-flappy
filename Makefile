@@ -44,7 +44,7 @@ DATA		:=	data
 INCLUDES	:=	include
 ROMFS		:=	romfs
 
-APP_TITLE   := Switch SDL2 Complete Starter
+APP_TITLE   := Switch Flappy
 APP_AUTHOR  := knight
 
 #---------------------------------------------------------------------------------

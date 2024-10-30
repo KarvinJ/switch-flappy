@@ -14,7 +14,7 @@
 #define JOY_RIGHT 14
 #define JOY_DOWN 15
 
-const int SCREEN_WIDTH = 1280;
-const int SCREEN_HEIGHT = 720;
+const int SCREEN_WIDTH = 960;
+const int SCREEN_HEIGHT = 544;
 
 int startSDL(SDL_Window *window, SDL_Renderer *renderer);
